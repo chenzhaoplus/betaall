@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sinosoft.elasticsearch.boot.mapper.MdBaseDrugMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.sinosoft.elasticsearch.boot.entity.MdBaseDrug">
+        <id column="ORG_ID" property="orgId" />
+        <result column="M_CODE" property="mCode" />
+        <result column="M_NAME" property="mName" />
+        <result column="M_ALIAS" property="mAlias" />
+        <result column="M_ENNAME" property="mEnname" />
+        <result column="SORT_CODE" property="sortCode" />
+        <result column="ZJCWB" property="zjcwb" />
+        <result column="ZJCPY" property="zjcpy" />
+        <result column="ZJCQT" property="zjcqt" />
+        <result column="M_STD" property="mStd" />
+        <result column="UNIT" property="unit" />
+        <result column="UNIT_NAME" property="unitName" />
+        <result column="YK_UNIT" property="ykUnit" />
+        <result column="YK_UNIT_NAME" property="ykUnitName" />
+        <result column="DOSE_UNIT" property="doseUnit" />
+        <result column="DOSE_UNIT_NAME" property="doseUnitName" />
+        <result column="MZ_UNIT" property="mzUnit" />
+        <result column="MZ_UNIT_NAME" property="mzUnitName" />
+        <result column="ZY_UNIT" property="zyUnit" />
+        <result column="ZY_UNIT_NAME" property="zyUnitName" />
+        <result column="MZ_PRINT_UNIT" property="mzPrintUnit" />
+        <result column="MZ_PRINT_UNIT_NAME" property="mzPrintUnitName" />
+        <result column="TRUNC" property="trunc" />
+        <result column="TRUNC_UNIT" property="truncUnit" />
+        <result column="MZ_CANDETACH" property="mzCandetach" />
+        <result column="ZY_CANDETACH" property="zyCandetach" />
+        <result column="M_TYPE" property="mType" />
+        <result column="M_JX_CODE" property="mJxCode" />
+        <result column="M_JX_NAME" property="mJxName" />
+        <result column="KF_NOUSE" property="kfNouse" />
+        <result column="KF_NOUSE_DATE" property="kfNouseDate" />
+        <result column="ZY_NOUSE" property="zyNouse" />
+        <result column="ZY_NOUSE_DATE" property="zyNouseDate" />
+        <result column="MZ_NOUSE" property="mzNouse" />
+        <result column="MZ_NOUSE_DATE" property="mzNouseDate" />
+        <result column="IS_NEW" property="isNew" />
+        <result column="IS_GZYP" property="isGzyp" />
+        <result column="IS_MZYP" property="isMzyp" />
+        <result column="IS_KJYP" property="isKjyp" />
+        <result column="IS_BJYP" property="isBjyp" />
+        <result column="JSYP_SORT" property="jsypSort" />
+        <result column="IS_DSY" property="isDsy" />
+        <result column="IS_COMPOSAFETY_LIMIT" property="isComposafetyLimit" />
+        <result column="IS_INJECTION" property="isInjection" />
+        <result column="HYPETEST" property="hypetest" />
+        <result column="IS_DECOCT" property="isDecoct" />
+        <result column="IS_JPZY" property="isJpzy" />
+        <result column="IS_ZB" property="isZb" />
+        <result column="M_SOURCE" property="mSource" />
+        <result column="IS_ZERO_ADD" property="isZeroAdd" />
+        <result column="ADD_PERCENT" property="addPercent" />
+        <result column="IS_RP" property="isRp" />
+        <result column="HIGH_STORAGE" property="highStorage" />
+        <result column="LOW_STORAGE" property="lowStorage" />
+        <result column="YF_HIGH_STORAGE" property="yfHighStorage" />
+        <result column="YF_LOW_STORAGE" property="yfLowStorage" />
+        <result column="NOUSED" property="noused" />
+        <result column="BASE_CATALOG" property="baseCatalog" />
+        <result column="YF_UNIT" property="yfUnit" />
+        <result column="YF_UNIT_NAME" property="yfUnitName" />
+        <result column="FBH" property="fbh" />
+        <result column="DRUG_FREQUENCY" property="drugFrequency" />
+        <result column="DRUG_MODE" property="drugMode" />
+        <result column="HOSP_ITEM_ID" property="hospItemId" />
+        <result column="ZERO_TYPE" property="zeroType" />
+        <result column="COUNT_SCALE" property="countScale" />
+        <result column="COUNT_UNIT" property="countUnit" />
+        <result column="JXPACK" property="jxpack" />
+    </resultMap>
+
+    <select id="test1" resultMap="BaseResultMap">
+        select *
+        from md_base_drug
+        where m_code=#{mCode}
+    </select>
+
+    <select id="testPage" resultMap="BaseResultMap">
+        select *
+        from md_base_drug
+    </select>
+
+</mapper>

@@ -1,0 +1,56 @@
+spring:
+  datasource:
+    name: druidDataSource
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+#      url: jdbc:mysql://10.18.103.31:3306/nurs-service?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+      url: jdbc:mysql://10.18.103.31:3306/gl?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+      username: zyycs
+      password: 123456
+      # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+      filters: stat,wall,logback,config
+      max-active: 100
+      initial-size: 1
+      max-wait: 60000
+      min-idle: 1
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: select 'x'
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-open-prepared-statements: 50
+      max-pool-prepared-statement-per-connection-size: 20
+
+#redis:
+#  # Redis数据库索引（默认为0）
+#  database: 0
+#  host: 10.18.103.11
+#  port: 6379
+#  # Redis服务器连接密码（默认为空）
+#  password:
+#  maxActive: 200
+#  maxWait: 3000
+#  maxIdle: 8
+#  minIdle: 0
+#  testOnBorrow: true
+#  clientName: root
+#  timeout: 3000
+
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+
+logging:
+  level:
+    root: INFO
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+  file: D:\logs\ol-outpatient.log
+
+
+

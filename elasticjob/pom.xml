@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sinosoft</groupId>
+    <artifactId>elasticjob</artifactId>
+    <version>1.0-RELEASES</version>
+    <modules>
+        <module>elasticjob-api</module>
+        <module>elasticjob-server</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <parent>
+<!--        <groupId>org.springframework.boot</groupId>-->
+<!--        <artifactId>spring-boot-starter-parent</artifactId>-->
+<!--        <version>2.2.4.RELEASE</version>-->
+        <groupId>com.taiyangguo</groupId>
+        <artifactId>beta-all</artifactId>
+        <version>2.0</version>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <encoding>UTF-8</encoding>
+        <druid.version>1.0.26</druid.version>
+        <druid-starter.version>1.1.10</druid-starter.version>
+        <mybatis-spring-boot-starter.version>1.3.1</mybatis-spring-boot-starter.version>
+        <mybatisplus-spring-boot-starter.version>2.1.9</mybatisplus-spring-boot-starter.version>
+        <mybatis-plus.version>2.1.9</mybatis-plus.version>
+        <mybatis-plus-extension.version>2.1.9</mybatis-plus-extension.version>
+        <mybatis-pagehelper.version>4.0.2</mybatis-pagehelper.version>
+        <pagehelper-spring-boot-starter.version>1.2.9</pagehelper-spring-boot-starter.version>
+        <!--<pagehelper-spring-boot-starter.version>1.1.2</pagehelper-spring-boot-starter.version>-->
+        <lombok.version>1.16.16</lombok.version>
+        <ojdbc14.version>10.2.0.4.0</ojdbc14.version>
+        <!--<cxf-spring-boot-starter-jaxws.version>3.2.6</cxf-spring-boot-starter-jaxws.version>-->
+        <cxf-spring-boot-starter-jaxws.version>3.1.18</cxf-spring-boot-starter-jaxws.version>
+        <scala-library.version>2.11.0</scala-library.version>
+        <springfox-swagger2.version>2.6.1</springfox-swagger2.version>
+        <springfox-swagger-ui.version>2.6.1</springfox-swagger-ui.version>
+        <springfox-swagger.version>2.7.0</springfox-swagger.version>
+        <swagger-bootstrap-ui.version>1.2</swagger-bootstrap-ui.version>
+        <velocity-engine-core.version>2.0</velocity-engine-core.version>
+        <fastjson.version>1.2.58</fastjson.version>
+        <gson.version>2.8.5</gson.version>
+        <junit.version>4.11</junit.version>
+        <mybatis-plus-boot-starter.version>3.1.1</mybatis-plus-boot-starter.version>
+        <mybatis-plus-generator.version>3.1.1</mybatis-plus-generator.version>
+        <freemarker.version>2.3.28</freemarker.version>
+        <mysql-connector-java.version>5.1.38</mysql-connector-java.version>
+        <jedis.version>2.8.1</jedis.version>
+        <dubbo.version>2.7.3</dubbo.version>
+        <elastic-job.version>2.1.5</elastic-job.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid-starter.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+<!--    <distributionManagement>-->
+<!--        <repository>-->
+<!--            <id>nexus-releases</id>-->
+<!--            <name>releases</name>-->
+<!--            <url>http://10.18.103.40:8081/nexus/content/repositories/releases/</url>-->
+<!--        </repository>-->
+<!--        <snapshotRepository>-->
+<!--            <id>nexus-snapshots</id>-->
+<!--            <url>http://10.18.103.40:8081/nexus/content/repositories/snapshots/</url>-->
+<!--        </snapshotRepository>-->
+<!--    </distributionManagement>-->
+
+    <repositories>
+        <repository>
+            <id>smcaiot-nexus</id>
+            <name>smcaiot nexus (59.173.19.66:18181)</name>
+            <!--            <url>http://59.173.19.66:18181/repository/maven-public/</url>-->
+            <url>http://localhost:8181/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <name>Nexus Release Repository</name>
+            <!--            <url>http://59.173.19.66:18181/repository/maven-releases/</url>-->
+            <url>http://localhost:8181/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <!--            <url>http://59.173.19.66:18181/repository/maven-snapshots/</url>-->
+            <url>http://localhost:8181/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-archetype-plugin</artifactId>
+                <version>2.2</version>
+            </plugin>
+            <!-- compiler插件, 设定JDK版本 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <showWarnings>true</showWarnings>
+                </configuration>
+            </plugin>
+            <!-- 打包跳过test -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <!-- <version>2.18.1</version> -->
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

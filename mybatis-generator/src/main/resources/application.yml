@@ -1,0 +1,55 @@
+server:
+  port: 8088
+  max-http-header-size: 1024000
+  servlet:
+    jsp:
+      init-parameters: 
+        development: true
+    context-path: /mybatis-generator
+
+spring:
+  profiles:
+    active: dev
+#    active: test
+#    active: pro
+
+  jackson:
+      default-property-inclusion: ALWAYS
+      time-zone: GMT+8
+      date-format: yyyy-MM-dd HH:mm:ss
+  application:
+    name: mybatis-generator
+#  swagger:
+#    basePackage: com.sinosoft
+
+mybatis-plus:
+#  mapper-locations: classpath*:**/*.xml
+  mapper-locations: classpath*:mapper/**/*.xml
+  #可以通过mybatis.config-location属性来指定mybatis的配置文件的位置，
+  # 实体扫描，多个package用逗号或者分号分隔
+  type-aliases-package: com.taiyangguo.**.entity   #自己的实体类地址
+#  type-aliases-package: com.sinosoft.**.domain   #自己的实体类地址
+  global-config:
+    db-config:
+      id-type: uuid
+      field-strategy: not_empty
+      table-underline: true
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+    refresh: true
+  configuration:
+    #开启驼峰命名法
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    jdbc-type-for-null: 'null'
+    # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#im:
+#  163cloud:
+#    app_key: 1e2c014c040e811c98f34c57036dbabc
+#    app_secret: 380ef7450545
+
+
+# 医生端白名单以;号间隔
+#doctorUrl: /doctor/olpatient/app-doctor/doctorLogin;/doctor/olpatient/app-doctor/msgCode

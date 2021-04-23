@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.taiyangguo.mybatisgenerator.boot.mapper.SlVideoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.taiyangguo.mybatisgenerator.boot.entity.SlVideo">
+        <result column="VID" property="vid" />
+        <result column="ORGFILENAME" property="orgfilename" />
+        <result column="USERFILENAME" property="userfilename" />
+        <result column="TYPE" property="type" />
+        <result column="UPLOADURL" property="uploadurl" />
+        <result column="SNAPSHOTURL" property="snapshoturl" />
+        <result column="XNOSTOKEN" property="xnostoken" />
+        <result column="CODE" property="code" />
+        <result column="MSG" property="msg" />
+        <result column="STATUS" property="status" />
+        <result column="DESCRIPTION" property="description" />
+        <result column="ISRELEASE" property="isrelease" />
+        <result column="SNAPLOCALURL" property="snaplocalurl" />
+        <result column="UUID" property="uuid" />
+        <result column="CREATER" property="creater" />
+        <result column="CREATETIME" property="createtime" />
+        <result column="UPDATER" property="updater" />
+        <result column="UPDATETIME" property="updatetime" />
+    </resultMap>
+
+</mapper>

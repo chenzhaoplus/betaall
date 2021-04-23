@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sinosoft.elasticjob.boot.mapper.TEmpiMiddleMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.sinosoft.elasticjob.boot.entity.TEmpiMiddle">
+        <id column="ID" property="id" />
+        <result column="STATUS" property="status" />
+        <result column="CONTENT" property="content" />
+        <result column="CREATE_TIME" property="createTime" />
+        <result column="SAME_SIMILAR" property="sameSimilar" />
+        <result column="MODIFY_DATE" property="modifyDate" />
+    </resultMap>
+
+</mapper>

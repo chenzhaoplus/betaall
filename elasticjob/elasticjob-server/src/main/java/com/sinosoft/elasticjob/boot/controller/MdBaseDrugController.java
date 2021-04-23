@@ -1,0 +1,44 @@
+package com.sinosoft.elasticjob.boot.controller;
+
+
+import com.sinosoft.elasticjob.model.ReturnDataInfo;
+import com.sinosoft.elasticjob.boot.entity.MdBaseDrug;
+import com.sinosoft.elasticjob.boot.service.MdBaseDrugService;
+import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.List;
+
+/**
+ * <p>
+ * MD医疗机构药品基本资料 前端控制器
+ * </p>
+ *
+ * @author sinosoft
+ * @since 2020-04-25
+ */
+@Controller
+@RequestMapping("/mdBaseDrug")
+@Slf4j
+public class MdBaseDrugController {
+    @Autowired
+    private MdBaseDrugService mdBaseDrugService;
+
+    @ApiOperation("测试")
+    @PostMapping(value = "/test")
+    @ResponseBody
+    public ReturnDataInfo<List<MdBaseDrug>> test(HttpServletRequest request, HttpServletResponse response) throws Exception{
+        String methodName = "test";
+        List<MdBaseDrug> appDoctor = mdBaseDrugService.test("29797");
+        return ReturnDataInfo.createSuccessfulSingleExecuteResult(appDoctor);
+    }
+
+}
+

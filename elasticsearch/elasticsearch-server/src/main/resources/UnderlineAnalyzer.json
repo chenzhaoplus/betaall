@@ -1,0 +1,13 @@
+{
+  "index": {
+    "number_of_replicas": "5"
+  },
+  "analysis": {
+    "analyzer": {
+      "underline": {
+        "type": "pattern",
+        "pattern":"_"
+      }
+    }
+  }
+}

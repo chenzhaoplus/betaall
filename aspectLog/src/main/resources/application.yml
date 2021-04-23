@@ -1,0 +1,10 @@
+server:
+  port: 8088
+  max-http-header-size: 1024000
+  servlet:
+    jsp:
+      init-parameters: 
+        development: true
+#    context-path: /aspectLog
+
+
