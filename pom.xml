@@ -19,6 +19,8 @@
         <module>elasticsearch</module>
         <module>mybatis-generator</module>
         <module>testspring</module>
+        <module>testspringsecurity</module>
+        <module>springtemplate</module>
     </modules>
 	
     <repositories>
