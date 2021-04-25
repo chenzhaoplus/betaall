@@ -25,15 +25,15 @@ public class EnumsTestController {
 
     private void test(){
         String type = AnimalEnum2.CAT.name();
-        String catEat = AnimalEnum2.valueOf(type).getService().get();
+        String catEat = AnimalEnum2.valueOf(type).getService().eat();
         System.out.println(catEat);
 
         int value = AnimalEnum2.PANDA.getValue();
-        String pandaEat = AnimalEnum2.getEnumByValue(value).getService().get();
+        String pandaEat = AnimalEnum2.getEnumByValue(value).getService().eat();
         System.out.println(pandaEat);
 
         String t = AnimalEnum2.MONKEY.name();
-        String monEat = AnimalEnum2.valueOf(t).getService().get();
+        String monEat = AnimalEnum2.valueOf(t).getService().eat();
         System.out.println(monEat);
     }
 

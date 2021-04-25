@@ -1,5 +1,6 @@
 package com.taiyangguo.testspring.enums.strategy;
 
+import com.taiyangguo.testspring.service.EnumCommon;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -7,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
-import java.util.function.Supplier;
 
 /**
  * @Author: cz
@@ -27,7 +27,7 @@ public enum AnimalEnum2 {
 
     private int value;
     @Setter
-    private Supplier<String> service;
+    private EnumCommon service;
 
     AnimalEnum2(int value){
         this.value = value;
