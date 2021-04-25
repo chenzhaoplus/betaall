@@ -45,9 +45,9 @@ public enum AnimalEnum2 {
 
         @PostConstruct
         private void postConstruct(){
-            PANDA.setService(pandaService::eat);
-            CAT.setService(catService::eat);
-            MONKEY.setService(monkeyService::eat);
+            PANDA.setService(pandaService);
+            CAT.setService(catService);
+            MONKEY.setService(monkeyService);
         }
 
     }

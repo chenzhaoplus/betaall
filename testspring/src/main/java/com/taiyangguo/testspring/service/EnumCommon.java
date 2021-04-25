@@ -12,6 +12,6 @@ public interface EnumCommon {
      *
      * @return
      */
-    String eat();
+    String action();
 
 }

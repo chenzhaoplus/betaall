@@ -16,7 +16,7 @@ public class CatServiceImpl implements EnumCommon {
      * @return
      */
     @Override
-    public String eat() {
+    public String action() {
         return "吃鱼";
     }
 }
