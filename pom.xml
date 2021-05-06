@@ -21,8 +21,9 @@
         <module>testspring</module>
         <module>testspringsecurity</module>
         <module>springtemplate</module>
+        <module>jdbcpool</module>
     </modules>
-	
+
     <repositories>
         <repository>
             <id>smcaiot-nexus</id>
