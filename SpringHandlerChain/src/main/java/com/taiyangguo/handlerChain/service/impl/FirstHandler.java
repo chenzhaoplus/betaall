@@ -13,7 +13,7 @@ public class FirstHandler extends HandlerChain {
     @Override
     public HandlerReturn action(HandlerContext ctx) {
         System.out.println("FirstHandler, info = " + ctx.getInfo());
-        return new HandlerReturn("FirstHandler action", false);
+        return new HandlerReturn("FirstHandler action");
     }
 
 }
