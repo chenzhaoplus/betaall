@@ -1,6 +1,6 @@
-package com.taiyangguo.testspring.enums.strategy;
+package com.taiyangguo.springstrategy.enums.strategy;
 
-import com.taiyangguo.testspring.service.EnumCommon;
+import com.taiyangguo.springstrategy.service.EnumCommon;
 import org.springframework.stereotype.Service;
 
 /**

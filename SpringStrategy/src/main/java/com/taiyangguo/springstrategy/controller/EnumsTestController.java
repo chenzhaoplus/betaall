@@ -1,6 +1,6 @@
-package com.taiyangguo.testspring.controller;
+package com.taiyangguo.springstrategy.controller;
 
-import com.taiyangguo.testspring.enums.strategy.AnimalEnum2;
+import com.taiyangguo.springstrategy.enums.strategy.AnimalEnum2;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

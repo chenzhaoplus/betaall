@@ -18,7 +18,7 @@
         <module>elasticjob</module>
         <module>elasticsearch</module>
         <module>mybatis-generator</module>
-        <module>testspring</module>
+        <module>SpringStrategy</module>
         <module>testspringsecurity</module>
         <module>springtemplate</module>
         <module>jdbcpool</module>

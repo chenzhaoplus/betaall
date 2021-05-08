@@ -1,6 +1,6 @@
-package com.taiyangguo.testspring.enums.strategy;
+package com.taiyangguo.springstrategy.enums.strategy;
 
-import com.taiyangguo.testspring.service.EnumCommon;
+import com.taiyangguo.springstrategy.service.EnumCommon;
 import org.springframework.stereotype.Service;
 
 /**
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
  * @Description:
  */
 @Service
-public class PandaServiceImpl implements EnumCommon {
+public class CatServiceImpl implements EnumCommon {
     /**
      * 吃
      *
@@ -17,6 +17,6 @@ public class PandaServiceImpl implements EnumCommon {
      */
     @Override
     public String action() {
-        return "吃竹子";
+        return "吃鱼";
     }
 }

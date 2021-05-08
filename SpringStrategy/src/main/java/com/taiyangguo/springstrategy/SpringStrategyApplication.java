@@ -1,13 +1,13 @@
-package com.taiyangguo.testspring;
+package com.taiyangguo.springstrategy;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TestspringApplication {
+public class SpringStrategyApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TestspringApplication.class, args);
+		SpringApplication.run(SpringStrategyApplication.class, args);
 	}
 
 }

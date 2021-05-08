@@ -8,10 +8,10 @@
 		<version>2.0</version>
 	</parent>
 	<groupId>com.taiyangguo</groupId>
-	<artifactId>testspring</artifactId>
+	<artifactId>SpringStrategy</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>testspring</name>
-	<description>test for Spring Boot</description>
+	<name>SpringStrategy</name>
+	<description>SpringStrategy for Spring Boot</description>
 
 	<properties>
 		<java.version>1.8</java.version>

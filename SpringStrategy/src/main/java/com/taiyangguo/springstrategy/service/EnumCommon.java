@@ -1,4 +1,4 @@
-package com.taiyangguo.testspring.service;
+package com.taiyangguo.springstrategy.service;
 
 /**
  * @Author: cz
