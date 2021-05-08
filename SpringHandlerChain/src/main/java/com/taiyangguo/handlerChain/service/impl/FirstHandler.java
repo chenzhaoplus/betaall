@@ -11,8 +11,9 @@ import org.springframework.stereotype.Component;
 public class FirstHandler extends HandlerChain {
 
     @Override
-    public HandlerReturn check(HandlerContext ctx) {
-        return new HandlerReturn("1", false);
+    public HandlerReturn action(HandlerContext ctx) {
+        System.out.println("FirstHandler, info = " + ctx.getInfo());
+        return new HandlerReturn("FirstHandler action", false);
     }
 
 }

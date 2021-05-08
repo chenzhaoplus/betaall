@@ -11,8 +11,9 @@ import org.springframework.stereotype.Component;
 public class SecondHandler extends HandlerChain {
 
     @Override
-    public HandlerReturn check(HandlerContext ctx) {
-        return new HandlerReturn("2", true);
+    public HandlerReturn action(HandlerContext ctx) {
+        System.out.println("SecondHandler, info = " + ctx.getInfo());
+        return new HandlerReturn("SecondHandler action", false);
     }
 
 }

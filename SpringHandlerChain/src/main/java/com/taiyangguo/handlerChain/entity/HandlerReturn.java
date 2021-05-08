@@ -13,6 +13,5 @@ import lombok.Data;
 public class HandlerReturn {
 
     private String msg;
-    private boolean isOver;
 
 }

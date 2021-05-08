@@ -4,6 +4,8 @@ import com.taiyangguo.handlerChain.entity.HandlerContext;
 import com.taiyangguo.handlerChain.entity.HandlerReturn;
 import lombok.Data;
 
+import java.util.Objects;
+
 @Data
 public abstract class HandlerChain {
 
@@ -12,12 +14,12 @@ public abstract class HandlerChain {
     /**
      * 执行控制方法
      *
-     * @param person
+     * @param ctx
      * @return
      */
     public HandlerReturn handler(HandlerContext ctx) {
-        HandlerReturn result = check(ctx);
-        if (!result.isOver()) {
+        HandlerReturn result = action(ctx);
+        if(Objects.nonNull(nextHandler)){
             return nextHandler.handler(ctx);
         }
         return result;
@@ -26,9 +28,9 @@ public abstract class HandlerChain {
     /**
      * 实际校验逻辑
      *
-     * @param person
+     * @param ctx
      * @return
      */
-    public abstract HandlerReturn check(HandlerContext ctx);
+    public abstract HandlerReturn action(HandlerContext ctx);
 
 }
