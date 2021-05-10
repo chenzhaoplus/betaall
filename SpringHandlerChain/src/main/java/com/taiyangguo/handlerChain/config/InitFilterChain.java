@@ -51,9 +51,4 @@ public class InitFilterChain {
         return chains;
     }
 
-    private String getLowerClazzName(Class clazz) {
-        String className = clazz.getSimpleName();
-        return className.substring(0, 1).toLowerCase() + className.substring(1);
-    }
-
 }
