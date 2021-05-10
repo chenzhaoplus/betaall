@@ -12,26 +12,49 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/handler")
 public class CheckController {
 
-    @Autowired
-    @Qualifier("initHandler")
-    private HandlerChain initHandler;
+//    @Autowired
+//    @Qualifier("initHandler")
+//    private HandlerChain initHandler;
     @Autowired
     @Qualifier("customHandler")
     private HandlerChain customHandler;
+    @Autowired
+    @Qualifier("customHandler2")
+    private HandlerChain customHandler2;
 
-    @RequestMapping("/check")
-    public HandlerReturn check() {
-        HandlerContext ctx = new HandlerContext();
-        ctx.setInfo("this is info");
-        HandlerReturn handler = initHandler.handler(ctx);
-        return handler;
-    }
+    /**
+     * http://localhost:8088/handler/init
+     * @return
+     */
+//    @RequestMapping("/init")
+//    public HandlerReturn check() {
+//        HandlerContext ctx = new HandlerContext();
+//        ctx.setInfo("this is info");
+//        HandlerReturn handler = initHandler.handler(ctx);
+//        return handler;
+//    }
 
-    @RequestMapping("/check2")
-    public HandlerReturn check2() {
+    /**
+     * http://localhost:8088/handler/custom
+     * @return
+     */
+    @RequestMapping("/custom")
+    public HandlerReturn custom() {
         HandlerContext ctx = new HandlerContext();
         ctx.setInfo("this is info");
         HandlerReturn handler = customHandler.handler(ctx);
+        return handler;
+    }
+
+    /**
+     * http://localhost:8088/handler/custom2
+     * @return
+     */
+    @RequestMapping("/custom2")
+    public HandlerReturn custom2() {
+        HandlerContext ctx = new HandlerContext();
+        ctx.setInfo("this is info");
+        HandlerReturn handler = customHandler2.handler(ctx);
         return handler;
     }
 

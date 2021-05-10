@@ -3,12 +3,15 @@ package com.taiyangguo.handlerChain.service;
 import com.taiyangguo.handlerChain.entity.HandlerContext;
 import com.taiyangguo.handlerChain.entity.HandlerReturn;
 import lombok.Data;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.util.Objects;
 
 @Data
+@Component
+@Scope("prototype")
 public abstract class HandlerChain {
-
     private HandlerChain nextHandler;
 
     /**

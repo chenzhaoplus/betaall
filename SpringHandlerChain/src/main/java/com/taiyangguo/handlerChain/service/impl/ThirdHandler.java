@@ -6,7 +6,7 @@ import com.taiyangguo.handlerChain.service.HandlerChain;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-@Order(1)
+@Order(2)
 @Component
 public class ThirdHandler extends HandlerChain {
 
