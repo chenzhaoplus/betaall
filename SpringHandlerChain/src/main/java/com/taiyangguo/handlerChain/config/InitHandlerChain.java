@@ -16,7 +16,6 @@ import java.util.Map;
 /**
  * 参考：
  * https://my.oschina.net/u/269777/blog/4276963
- * https://www.toutiao.com/i6790678642474091022/?tt_from=weixin&utm_campaign=client_share&wxshare_count=1&timestamp=1620575442&app=news_article&utm_source=weixin&utm_medium=toutiao_android&use_new_style=1&req_id=202105092350410102122020930377C265&share_token=cc5df53a-6230-4d26-baba-61d52a3ee1cc&group_id=6790678642474091022&wid=1620608829572
  */
 @Configuration
 public class InitHandlerChain {
