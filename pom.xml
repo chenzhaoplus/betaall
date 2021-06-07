@@ -23,6 +23,7 @@
         <module>springtemplate</module>
         <module>jdbcpool</module>
         <module>SpringHandlerChain</module>
+        <module>testredisson</module>
     </modules>
 
     <repositories>
