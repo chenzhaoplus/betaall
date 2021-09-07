@@ -29,15 +29,15 @@ public class TestController {
     @GetMapping(value = "/sendMessage")
     public Integer sendMessage(String lockName, boolean clear) throws Exception {
         log.info("[test success]");
-        if(clear){
+        if (clear) {
             num = 1;
         }
         if (StringUtils.isEmpty(lockName)) {
             lockName = "test";
         }
 
-        RLock lock = redissonClient.getLock("anyLock");
-        try{
+        RLock lock = redissonClient.getLock(lockName);
+        try {
             // 1. 最常见的使用方法
             //lock.lock();
 
@@ -46,7 +46,7 @@ public class TestController {
 
             // 3. 尝试加锁，最多等待3秒，上锁以后10秒自动解锁
             boolean res = lock.tryLock(3, 10, TimeUnit.SECONDS);
-            if(res){
+            if (res) {
                 //成功
                 // do your business
                 log.info("lock num = {}", num++);
