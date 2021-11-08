@@ -23,9 +23,8 @@ public class ZzSchoolController {
     private ZzSchoolService schoolService;
 
     @RequestMapping(value = "/testNeo4j", method = RequestMethod.POST)
-    public void testNeo4j() throws Exception {
-        List list = schoolService.testNeo4j();
-        System.out.println(list);
+    public List testNeo4j() throws Exception {
+        return schoolService.testNeo4j();
     }
 
 }
