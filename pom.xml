@@ -24,6 +24,7 @@
         <module>jdbcpool</module>
         <module>SpringHandlerChain</module>
         <module>testredisson</module>
+        <module>neo4j_test</module>
     </modules>
 
     <repositories>
