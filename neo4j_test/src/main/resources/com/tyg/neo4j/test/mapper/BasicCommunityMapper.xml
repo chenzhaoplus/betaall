@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tyg.neo4j.test.mapper.BasicCommunityMapper">
+
+    <resultMap id="BaseResultMap" type="com.tyg.neo4j.test.entity.BasicCommunity">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="communityId" column="community_id" jdbcType="VARCHAR"/>
+        <result property="communityName" column="community_name" jdbcType="VARCHAR"/>
+<!--        <result property="communityType" column="community_type" jdbcType="VARCHAR"/>-->
+<!--        <result property="projectId" column="project_id" jdbcType="VARCHAR"/>-->
+<!--        <result property="provinceCode" column="province_code" jdbcType="VARCHAR"/>-->
+<!--        <result property="cityCode" column="city_code" jdbcType="VARCHAR"/>-->
+<!--        <result property="areaCode" column="area_code" jdbcType="VARCHAR"/>-->
+<!--        <result property="town" column="town" jdbcType="VARCHAR"/>-->
+<!--        <result property="street" column="street" jdbcType="VARCHAR"/>-->
+<!--        <result property="jlxbm" column="jlxbm" jdbcType="VARCHAR"/>-->
+<!--        <result property="mph" column="mph" jdbcType="VARCHAR"/>-->
+<!--        <result property="detailAddress" column="detail_address" jdbcType="VARCHAR"/>-->
+<!--        <result property="longitude" column="longitude" jdbcType="VARCHAR"/>-->
+<!--        <result property="latitude" column="latitude" jdbcType="VARCHAR"/>-->
+<!--        <result property="belongCommunityCode" column="belong_community_code" jdbcType="VARCHAR"/>-->
+<!--        <result property="policyStationCode" column="policy_station_code" jdbcType="VARCHAR"/>-->
+<!--        <result property="developers" column="developers" jdbcType="VARCHAR"/>-->
+<!--        <result property="propertyCompanyName" column="property_company_name" jdbcType="VARCHAR"/>-->
+<!--        <result property="propertyCompanyPhone" column="property_company_phone" jdbcType="VARCHAR"/>-->
+<!--        <result property="propertyManagerName" column="property_manager_name" jdbcType="VARCHAR"/>-->
+<!--        <result property="propertyManagerPhone" column="property_manager_phone" jdbcType="VARCHAR"/>-->
+<!--        <result property="communityPhoto" column="community_photo" jdbcType="VARCHAR"/>-->
+<!--        <result property="servicePhone" column="service_phone" jdbcType="VARCHAR"/>-->
+<!--        <result property="installPhone" column="install_phone" jdbcType="VARCHAR"/>-->
+<!--        <result property="policename" column="policename" jdbcType="VARCHAR"/>-->
+<!--        <result property="policephone" column="policephone" jdbcType="VARCHAR"/>-->
+<!--        <result property="totalBuilding" column="total_building" jdbcType="INTEGER"/>-->
+<!--        <result property="totalRoom" column="total_room" jdbcType="INTEGER"/>-->
+<!--        <result property="totalPerson" column="total_person" jdbcType="VARCHAR"/>-->
+<!--        <result property="crtTime" column="crt_time" jdbcType="TIMESTAMP"/>-->
+<!--        <result property="crtBy" column="crt_by" jdbcType="VARCHAR"/>-->
+<!--        <result property="updTime" column="upd_time" jdbcType="TIMESTAMP"/>-->
+<!--        <result property="updBy" column="upd_by" jdbcType="VARCHAR"/>-->
+<!--        <result property="remarks" column="remarks" jdbcType="VARCHAR"/>-->
+<!--        <result property="delFlag" column="del_flag" jdbcType="VARCHAR"/>-->
+<!--        <result property="isLeelenDevice" column="is_leelen_device" jdbcType="VARCHAR"/>-->
+<!--        <result property="communityCode" column="community_code" jdbcType="VARCHAR"/>-->
+<!--        <result property="communityAtlas" column="community_atlas" jdbcType="VARCHAR"/>-->
+<!--        <result property="streetCode" column="street_code" jdbcType="VARCHAR"/>-->
+<!--        <result property="townCode" column="town_code" jdbcType="VARCHAR"/>-->
+    </resultMap>
+
+    <update id="loadCommunity" >
+        CALL apoc.load.jdbc(${jdbcSql})
+        CREATE (n:TestCommunity {community_id: row.community_id, community_name: row.community_name})
+    </update>
+
+    <select id="findCommunity" resultMap="BaseResultMap">
+        match (n:TestCommunity)
+		return n.community_id as community_id, n.community_name as community_name
+    </select>
+
+
+</mapper>
