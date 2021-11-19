@@ -11,4 +11,6 @@ public interface BasicCommunityService {
 
     List loadCommunity();
 
+    List testDruid();
+
 }
