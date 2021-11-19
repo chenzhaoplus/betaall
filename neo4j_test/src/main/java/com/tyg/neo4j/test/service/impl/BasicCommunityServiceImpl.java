@@ -90,6 +90,7 @@ public class BasicCommunityServiceImpl implements BasicCommunityService {
         properties.setProperty("druid.maxActive", "50");
         properties.setProperty("druid.initialSize", "5");
         properties.setProperty("druid.minIdle", "1");
+        properties.setProperty("druid.validationQuery", "CALL apoc.meta.data()");
         properties.setProperty("druid.maxWait", "30000");
         properties.setProperty("druid.filters", "stat");
         properties.setProperty("druid.timeBetweenEvictionRunsMillis", "10000");
