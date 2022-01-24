@@ -14,9 +14,11 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -32,6 +34,7 @@ public class TestController {
     @GetMapping(value = "/sendMessage")
     public String sendMessage() throws Exception {
         log.info("[test success]");
+
         return "success";
     }
 
@@ -59,6 +62,13 @@ public class TestController {
         }
 
         return "success";
+    }
+
+    public static void main(String[] args) {
+        Set<String> strings = Charset.availableCharsets().keySet();
+        System.out.println(strings);
+        Charset charset = Charset.defaultCharset();
+        System.out.println(charset);
     }
 
 }
